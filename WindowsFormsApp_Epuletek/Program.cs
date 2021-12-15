@@ -15,7 +15,7 @@ namespace WindowsFormsApp_Epuletek
         {
             Application.EnableVisualStyles(); //Ez itt micsoda?
             Application.SetCompatibleTextRenderingDefault(false); //Ez itt micsoda?
-            form_Nyito = new Form_Nyito();
+            form_Nyito = new Form_Nyito(); //Ez a 18. sor
             form_csaladihaz = new Form_Csaladihaz();
             form_Tombhaz = new Form_Tombhaz();
 

@@ -56,7 +56,7 @@ namespace WindowsFormsApp_Epuletek
             this.dateTimePicker_Befejezes.Location = new System.Drawing.Point(171, 183);
             this.dateTimePicker_Befejezes.Name = "dateTimePicker_Befejezes";
             this.dateTimePicker_Befejezes.Size = new System.Drawing.Size(120, 20);
-            this.dateTimePicker_Befejezes.TabIndex = 23;
+            this.dateTimePicker_Befejezes.TabIndex = 4;
             // 
             // dateTimePicker_Kezdes
             // 
@@ -64,7 +64,7 @@ namespace WindowsFormsApp_Epuletek
             this.dateTimePicker_Kezdes.Location = new System.Drawing.Point(171, 143);
             this.dateTimePicker_Kezdes.Name = "dateTimePicker_Kezdes";
             this.dateTimePicker_Kezdes.Size = new System.Drawing.Size(120, 20);
-            this.dateTimePicker_Kezdes.TabIndex = 24;
+            this.dateTimePicker_Kezdes.TabIndex = 3;
             // 
             // comboBox_Epitesianyag
             // 
@@ -72,7 +72,7 @@ namespace WindowsFormsApp_Epuletek
             this.comboBox_Epitesianyag.Location = new System.Drawing.Point(171, 100);
             this.comboBox_Epitesianyag.Name = "comboBox_Epitesianyag";
             this.comboBox_Epitesianyag.Size = new System.Drawing.Size(212, 21);
-            this.comboBox_Epitesianyag.TabIndex = 22;
+            this.comboBox_Epitesianyag.TabIndex = 2;
             // 
             // label2
             // 
@@ -98,7 +98,7 @@ namespace WindowsFormsApp_Epuletek
             0});
             this.numericUpDown_Alapterulet.Name = "numericUpDown_Alapterulet";
             this.numericUpDown_Alapterulet.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown_Alapterulet.TabIndex = 20;
+            this.numericUpDown_Alapterulet.TabIndex = 1;
             this.numericUpDown_Alapterulet.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown_Alapterulet.Value = new decimal(new int[] {
             20,
@@ -111,7 +111,7 @@ namespace WindowsFormsApp_Epuletek
             this.textBox_Cim.Location = new System.Drawing.Point(171, 20);
             this.textBox_Cim.Name = "textBox_Cim";
             this.textBox_Cim.Size = new System.Drawing.Size(212, 20);
-            this.textBox_Cim.TabIndex = 19;
+            this.textBox_Cim.TabIndex = 0;
             // 
             // label8
             // 
@@ -177,7 +177,7 @@ namespace WindowsFormsApp_Epuletek
             0});
             this.numericUpDown_LakasokSzama.Name = "numericUpDown_LakasokSzama";
             this.numericUpDown_LakasokSzama.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown_LakasokSzama.TabIndex = 26;
+            this.numericUpDown_LakasokSzama.TabIndex = 5;
             this.numericUpDown_LakasokSzama.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown_LakasokSzama.Value = new decimal(new int[] {
             1,
@@ -200,7 +200,7 @@ namespace WindowsFormsApp_Epuletek
             this.comboBox_FenntartasTipusa.Location = new System.Drawing.Point(171, 279);
             this.comboBox_FenntartasTipusa.Name = "comboBox_FenntartasTipusa";
             this.comboBox_FenntartasTipusa.Size = new System.Drawing.Size(212, 21);
-            this.comboBox_FenntartasTipusa.TabIndex = 22;
+            this.comboBox_FenntartasTipusa.TabIndex = 6;
             // 
             // checkBox1
             // 
@@ -208,7 +208,7 @@ namespace WindowsFormsApp_Epuletek
             this.checkBox1.Location = new System.Drawing.Point(146, 331);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(62, 17);
-            this.checkBox1.TabIndex = 28;
+            this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Van Lift";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
@@ -217,7 +217,7 @@ namespace WindowsFormsApp_Epuletek
             this.button1.Location = new System.Drawing.Point(32, 377);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(351, 31);
-            this.button1.TabIndex = 29;
+            this.button1.TabIndex = 8;
             this.button1.Text = "Rögzítés";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);

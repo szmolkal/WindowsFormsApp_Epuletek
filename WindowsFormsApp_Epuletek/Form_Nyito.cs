@@ -26,10 +26,10 @@ namespace WindowsFormsApp_Epuletek
         private void AdatokBetoltese()
         {
             //-- adatok betöltése az "epuletek.csv" fájlból ----------
-            if (File.Exists("epuletek.csv"))
+            if (File.Exists(@"C:\epuletek.csv"))
             {
                 //-- Létezik a fájl, beolvassuk az adatokat
-                using (StreamReader sr = new StreamReader("epuletek.csv"))
+                using (StreamReader sr = new StreamReader(@"C:\epuletek.csv"))
                 {
                     while (!sr.EndOfStream)
                     {
@@ -81,7 +81,7 @@ namespace WindowsFormsApp_Epuletek
         {
             try
             {
-                using (StreamWriter sw = new StreamWriter("epuletek.csv"))
+                using (StreamWriter sw = new StreamWriter(@"C:\epuletek.csv"))
                 {
                     foreach (var item in listBox_Epuletek.Items)
                     {

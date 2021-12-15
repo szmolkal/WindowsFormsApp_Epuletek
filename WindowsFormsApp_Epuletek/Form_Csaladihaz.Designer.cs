@@ -56,7 +56,7 @@ namespace WindowsFormsApp_Epuletek
             this.label1.Location = new System.Drawing.Point(23, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(26, 13);
-            this.label1.TabIndex = 0;
+            this.label1.TabIndex = 9;
             this.label1.Text = "Cím";
             // 
             // label3
@@ -65,7 +65,7 @@ namespace WindowsFormsApp_Epuletek
             this.label3.Location = new System.Drawing.Point(23, 267);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 15;
             this.label3.Text = "Tető tipusa";
             // 
             // label4
@@ -74,7 +74,7 @@ namespace WindowsFormsApp_Epuletek
             this.label4.Location = new System.Drawing.Point(23, 227);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 13);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 14;
             this.label4.Text = "Ottélők száma";
             // 
             // label5
@@ -83,7 +83,7 @@ namespace WindowsFormsApp_Epuletek
             this.label5.Location = new System.Drawing.Point(23, 187);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 13);
-            this.label5.TabIndex = 4;
+            this.label5.TabIndex = 13;
             this.label5.Text = "Munkavégzés vége";
             // 
             // label6
@@ -92,7 +92,7 @@ namespace WindowsFormsApp_Epuletek
             this.label6.Location = new System.Drawing.Point(23, 147);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(115, 13);
-            this.label6.TabIndex = 5;
+            this.label6.TabIndex = 12;
             this.label6.Text = "Munkavégzés kezdete";
             // 
             // label7
@@ -101,7 +101,7 @@ namespace WindowsFormsApp_Epuletek
             this.label7.Location = new System.Drawing.Point(23, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 13);
-            this.label7.TabIndex = 6;
+            this.label7.TabIndex = 11;
             this.label7.Text = "Építésianyag";
             // 
             // label8
@@ -110,7 +110,7 @@ namespace WindowsFormsApp_Epuletek
             this.label8.Location = new System.Drawing.Point(23, 67);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(57, 13);
-            this.label8.TabIndex = 7;
+            this.label8.TabIndex = 10;
             this.label8.Text = "Alapterület";
             // 
             // checkBox_Garazs
@@ -119,7 +119,7 @@ namespace WindowsFormsApp_Epuletek
             this.checkBox_Garazs.Location = new System.Drawing.Point(60, 306);
             this.checkBox_Garazs.Name = "checkBox_Garazs";
             this.checkBox_Garazs.Size = new System.Drawing.Size(78, 17);
-            this.checkBox_Garazs.TabIndex = 8;
+            this.checkBox_Garazs.TabIndex = 7;
             this.checkBox_Garazs.Text = "van garázs";
             this.checkBox_Garazs.UseVisualStyleBackColor = true;
             // 
@@ -128,7 +128,7 @@ namespace WindowsFormsApp_Epuletek
             this.textBox_Cim.Location = new System.Drawing.Point(165, 24);
             this.textBox_Cim.Name = "textBox_Cim";
             this.textBox_Cim.Size = new System.Drawing.Size(212, 20);
-            this.textBox_Cim.TabIndex = 9;
+            this.textBox_Cim.TabIndex = 0;
             // 
             // numericUpDown_Alapterulet
             // 
@@ -145,7 +145,7 @@ namespace WindowsFormsApp_Epuletek
             0});
             this.numericUpDown_Alapterulet.Name = "numericUpDown_Alapterulet";
             this.numericUpDown_Alapterulet.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown_Alapterulet.TabIndex = 10;
+            this.numericUpDown_Alapterulet.TabIndex = 1;
             this.numericUpDown_Alapterulet.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown_Alapterulet.Value = new decimal(new int[] {
             20,
@@ -168,7 +168,7 @@ namespace WindowsFormsApp_Epuletek
             this.comboBox_Epitesianyag.Location = new System.Drawing.Point(165, 104);
             this.comboBox_Epitesianyag.Name = "comboBox_Epitesianyag";
             this.comboBox_Epitesianyag.Size = new System.Drawing.Size(212, 21);
-            this.comboBox_Epitesianyag.TabIndex = 12;
+            this.comboBox_Epitesianyag.TabIndex = 2;
             // 
             // dateTimePicker_Kezdes
             // 
@@ -176,7 +176,7 @@ namespace WindowsFormsApp_Epuletek
             this.dateTimePicker_Kezdes.Location = new System.Drawing.Point(165, 147);
             this.dateTimePicker_Kezdes.Name = "dateTimePicker_Kezdes";
             this.dateTimePicker_Kezdes.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker_Kezdes.TabIndex = 13;
+            this.dateTimePicker_Kezdes.TabIndex = 3;
             // 
             // dateTimePicker_Befejezes
             // 
@@ -184,7 +184,7 @@ namespace WindowsFormsApp_Epuletek
             this.dateTimePicker_Befejezes.Location = new System.Drawing.Point(165, 187);
             this.dateTimePicker_Befejezes.Name = "dateTimePicker_Befejezes";
             this.dateTimePicker_Befejezes.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker_Befejezes.TabIndex = 13;
+            this.dateTimePicker_Befejezes.TabIndex = 4;
             // 
             // numericUpDown_OttElok
             // 
@@ -196,7 +196,7 @@ namespace WindowsFormsApp_Epuletek
             0});
             this.numericUpDown_OttElok.Name = "numericUpDown_OttElok";
             this.numericUpDown_OttElok.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown_OttElok.TabIndex = 14;
+            this.numericUpDown_OttElok.TabIndex = 5;
             this.numericUpDown_OttElok.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.numericUpDown_OttElok.Value = new decimal(new int[] {
             1,
@@ -210,14 +210,14 @@ namespace WindowsFormsApp_Epuletek
             this.comboBox_TetoTipusa.Location = new System.Drawing.Point(165, 264);
             this.comboBox_TetoTipusa.Name = "comboBox_TetoTipusa";
             this.comboBox_TetoTipusa.Size = new System.Drawing.Size(212, 21);
-            this.comboBox_TetoTipusa.TabIndex = 12;
+            this.comboBox_TetoTipusa.TabIndex = 6;
             // 
             // button_Save
             // 
             this.button_Save.Location = new System.Drawing.Point(26, 357);
             this.button_Save.Name = "button_Save";
             this.button_Save.Size = new System.Drawing.Size(351, 44);
-            this.button_Save.TabIndex = 15;
+            this.button_Save.TabIndex = 8;
             this.button_Save.Text = "Rögzítés";
             this.button_Save.UseVisualStyleBackColor = true;
             this.button_Save.Click += new System.EventHandler(this.button_Save_Click);

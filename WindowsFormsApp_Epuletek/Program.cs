@@ -13,7 +13,7 @@ namespace WindowsFormsApp_Epuletek
         public static Form_Tombhaz form_Tombhaz = null;
         static void Main()
         {
-            Application.EnableVisualStyles();
+            Application.EnableVisualStyles(); //Ez itt micsoda?
             Application.SetCompatibleTextRenderingDefault(false);
             form_Nyito = new Form_Nyito();
             form_csaladihaz = new Form_Csaladihaz();

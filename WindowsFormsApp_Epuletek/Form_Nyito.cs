@@ -77,6 +77,11 @@ namespace WindowsFormsApp_Epuletek
                                 (TetoAnyaga)Enum.Parse(typeof(TetoAnyaga), sor[8])
                                 );
                             listBox_Epuletek.Items.Add(uj);
+                            Console.WriteLine("A dátumok megegyeznek: {0}",DateTime.Now.ToString("yyyy-MM-dd").Equals(uj.Kezdes.ToString("yyyy-MM-dd")));
+                            if (uj.Kezdes.ToString("yyyy-MM-dd").Equals(DateTime.Now.ToString("yyyy-MM-dd")))
+                            {
+                                listBox_Esedekes_Epuletek.Items.Add(uj);
+                            }
                         }
                         else
                         {
@@ -90,7 +95,11 @@ namespace WindowsFormsApp_Epuletek
                                 (Fenntartas)Enum.Parse(typeof(Fenntartas), sor[7]),
                                 bool.Parse(sor[8]));
                             listBox_Epuletek.Items.Add(uj);
-                        }
+                            Console.WriteLine("A dátumok megegyeznek: {0}",DateTime.Now.ToString("yyyy-MM-dd").Equals(uj.Kezdes.ToString("yyyy-MM-dd")));
+                            if (uj.Kezdes.ToString("yyyy-MM-dd").Equals(DateTime.Now.ToString("yyyy-MM-dd")))
+                            {
+                                listBox_Esedekes_Epuletek.Items.Add(uj);
+                            }                        }
                     }
                 }
             }
@@ -211,6 +220,25 @@ namespace WindowsFormsApp_Epuletek
                             "Építési anyag: " + epulet.Epitesianyag + "\n" +
                             "Munkakezdés időpontja: " + epulet.Kezdes.ToString("yyyy-MM-dd") + "\n" +
                             "Befejezés időpontja: " + epulet.Befejezes.ToString("yyyy-MM-dd"));
+        }
+
+        private void listBox_Esedekes_Epuletek_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox_Epuletek.SelectedItem.GetType() == typeof(Csaladihaz))
+            {
+                Csaladihaz csaladihaz = (Csaladihaz)listBox_Epuletek.SelectedItem;
+                CultureInfo culture = new CultureInfo("hu-HU");
+                long kalkulaltAr = (csaladihaz.Alapterulet * Convert.ToInt32(csaladihaz.OttElok) * 10000);
+                //int kalkulaltAr = Int32.Parse((csaladihaz.Alapterulet * Convert.ToInt32(csaladihaz.OttElok) * 10000).ToString("#,##0"), NumberStyles.AllowThousands);
+                //textBox_Arkalkulacio.Text =String.Format(culture,"{0:N0}",kalkulaltAr.ToString());
+                textBox_Arkalkulacio.Text = kalkulaltAr.ToString("#,##0");
+            }
+            else
+            {
+                Tombhaz tombhaz = (Tombhaz)listBox_Epuletek.SelectedItem;
+                long kalkulaltAr = tombhaz.Alapterulet * tombhaz.LakasokSzama * 8000;
+                textBox_Arkalkulacio.Text = kalkulaltAr.ToString("#,##0");
+            }
         }
     }
 }

@@ -117,6 +117,7 @@ namespace WindowsFormsApp_Epuletek
             this.listBox_Esedekes_Epuletek.Sorted = true;
             this.listBox_Esedekes_Epuletek.TabIndex = 7;
             this.listBox_Esedekes_Epuletek.SelectedIndexChanged += new System.EventHandler(this.listBox_Esedekes_Epuletek_SelectedIndexChanged);
+            this.listBox_Esedekes_Epuletek.DoubleClick += new System.EventHandler(this.listBox_Esedekes_Epuletek_DoubleClick);
             // 
             // Form_Nyito
             // 

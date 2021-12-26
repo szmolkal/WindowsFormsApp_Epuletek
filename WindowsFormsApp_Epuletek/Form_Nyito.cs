@@ -216,7 +216,7 @@ namespace WindowsFormsApp_Epuletek
         {
             Epulet epulet = (Epulet)listBox_Epuletek.SelectedItem;
             MessageBox.Show("Címe: " + epulet.Cim + "\n" +
-                            "Alapterülete: " + epulet.Alapterulet + "\n" +
+                            "Alapterülete: " + epulet.Alapterulet.ToString("#,##0") + " m\xB2\n" +
                             "Építési anyag: " + epulet.Epitesianyag + "\n" +
                             "Munkakezdés időpontja: " + epulet.Kezdes.ToString("yyyy-MM-dd") + "\n" +
                             "Befejezés időpontja: " + epulet.Befejezes.ToString("yyyy-MM-dd"));
@@ -224,7 +224,7 @@ namespace WindowsFormsApp_Epuletek
 
         private void listBox_Esedekes_Epuletek_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBox_Epuletek.SelectedItem.GetType() == typeof(Csaladihaz))
+            if (listBox_Esedekes_Epuletek.SelectedItem.GetType() == typeof(Csaladihaz))
             {
                 Csaladihaz csaladihaz = (Csaladihaz)listBox_Epuletek.SelectedItem;
                 CultureInfo culture = new CultureInfo("hu-HU");
@@ -235,10 +235,21 @@ namespace WindowsFormsApp_Epuletek
             }
             else
             {
-                Tombhaz tombhaz = (Tombhaz)listBox_Epuletek.SelectedItem;
+                Tombhaz tombhaz = (Tombhaz)listBox_Esedekes_Epuletek.SelectedItem;
                 long kalkulaltAr = tombhaz.Alapterulet * tombhaz.LakasokSzama * 8000;
                 textBox_Arkalkulacio.Text = kalkulaltAr.ToString("#,##0");
             }
+        }
+
+        private void listBox_Esedekes_Epuletek_DoubleClick(object sender, EventArgs e)
+        {
+            Epulet epulet = (Epulet)listBox_Esedekes_Epuletek.SelectedItem;
+            MessageBox.Show("Címe: " + epulet.Cim + "\n" +
+                            "Alapterülete: " + epulet.Alapterulet.ToString("#,##0") + " m\xB2\n" +
+                            "Építési anyag: " + epulet.Epitesianyag + "\n" +
+                            "Munkakezdés időpontja: " + epulet.Kezdes.ToString("yyyy-MM-dd") + "\n" +
+                            "Befejezés időpontja: " + epulet.Befejezes.ToString("yyyy-MM-dd"));
+
         }
     }
 }

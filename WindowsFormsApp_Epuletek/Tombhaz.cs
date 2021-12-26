@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp_Epuletek
 {
-    class Tombhaz : Epulet,CSV, Kalkulacio
+    class Tombhaz : Epulet, CSV, Kalkulacio
     {
         readonly int lakasokSzama;
         Fenntartas fenntartasTipusa;

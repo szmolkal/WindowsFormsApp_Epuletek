@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace WindowsFormsApp_Epuletek
 {
@@ -20,43 +21,60 @@ namespace WindowsFormsApp_Epuletek
 
         private void Form_Csaladihaz_Load(object sender, EventArgs e)
         {
-            Csaladihaz kiv = (Csaladihaz)Program.form_Nyito.listBox_Epuletek.SelectedItem;
-            if (Muvelet.Equals("update"))
+            //-- Csaladihaz kiv = (Csaladihaz)Program.form_Nyito.listBox_Epuletek.SelectedItem;
+            Debug.WriteLine("Form_Csaladihaz_Load Program.form_Nyito.listBox_Epuletek.SelectedItem.GetType().Name: " + Program.form_Nyito.listBox_Epuletek.SelectedItem.GetType().Name.ToString());
+            if (Program.form_Nyito.listBox_Epuletek.SelectedItem.GetType().Name.ToString().Equals("Csaladihaz"))
             {
-                textBox_Cim.Text = kiv.Cim;
-                textBox_Cim.ReadOnly = true;
-                numericUpDown_Alapterulet.Value = kiv.Alapterulet;
-                comboBox_Epitesianyag.Enabled = false;
-                dateTimePicker_Befejezes.Value = kiv.Befejezes;
-                dateTimePicker_Kezdes.Value = kiv.Kezdes;
-                numericUpDown_OttElok.Value = kiv.OttElok;
-                checkBox_Garazs.Checked = kiv.VanGarazs;
-            }
-            foreach (string item in Enum.GetNames(typeof(Anyagok)))
-            {
-                int index = comboBox_Epitesianyag.Items.Add(item);
-                if (Muvelet.Equals("update") && kiv.Epitesianyag.ToString().Equals(item))
+                Csaladihaz kiv = (Csaladihaz)Program.form_Nyito.listBox_Epuletek.SelectedItem;
+                if (Muvelet.Equals("update"))
                 {
-                    //-- Ha nem állítjuk be, akkor -1 marad !!!
-                    comboBox_Epitesianyag.SelectedIndex = index;
+                    textBox_Cim.Text = kiv.Cim;
+                    textBox_Cim.ReadOnly = true;
+                    numericUpDown_Alapterulet.Value = kiv.Alapterulet;
+                    comboBox_Epitesianyag.Enabled = false;
+                    dateTimePicker_Befejezes.Value = kiv.Befejezes;
+                    dateTimePicker_Kezdes.Value = kiv.Kezdes;
+                    numericUpDown_OttElok.Value = kiv.OttElok;
+                    checkBox_Garazs.Checked = kiv.VanGarazs;
+                }
+                foreach (string item in Enum.GetNames(typeof(Anyagok)))
+                {
+                    Console.WriteLine("Építési anyag: {0}",item);
+                    int index = comboBox_Epitesianyag.Items.Add(item);
+                    if (Muvelet.Equals("update") && kiv.Epitesianyag.ToString().Equals(item))
+                    {
+                        //-- Ha nem állítjuk be, akkor -1 marad !!!
+                        comboBox_Epitesianyag.SelectedIndex = index;
+                    }
+                }
+                foreach (string item in Enum.GetNames(typeof(TetoAnyaga)))
+                {
+                    int index = comboBox_TetoTipusa.Items.Add(item);
+                    if (Muvelet.Equals("update") && kiv.Tetotipus.ToString().Equals(item))
+                    {
+                        comboBox_TetoTipusa.SelectedIndex = index;
+                    }
                 }
             }
-            foreach (string item in Enum.GetNames(typeof(TetoAnyaga)))
+            else
             {
-                int index = comboBox_TetoTipusa.Items.Add(item);
-                if (Muvelet.Equals("update") && kiv.Tetotipus.ToString().Equals(item))
-                {
-                    comboBox_TetoTipusa.SelectedIndex = index;
-                }
+                string MessageBoxMessage = "A kiválasztott elem " + Program.form_Nyito.listBox_Epuletek.SelectedItem.GetType().Name + " nem családiház, válassz új elemet!";
+                MessageBox.Show(MessageBoxMessage);
+                this.DialogResult=DialogResult.Cancel;
+                return;
             }
+
         }
 
         private void button_Save_Click(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(textBox_Cim.Text))
             {
+                
                 return;
             }
+            //Console.WriteLine("Form_Csaladihaz.button_Save_Click eljárás (TetoAnyaga) {0} {1}", Enum.Parse(typeof(TetoAnyaga),comboBox_TetoTipusa.SelectedIndex.ToString()), typeof(TetoAnyaga));
+
             TetoAnyaga tetoAnyaga = (TetoAnyaga)Enum.Parse(typeof(TetoAnyaga), comboBox_TetoTipusa.SelectedIndex.ToString());
             Anyagok epitesiAnyag = (Anyagok)Enum.Parse(typeof(Anyagok), comboBox_Epitesianyag.SelectedIndex.ToString());
             Csaladihaz uj = new Csaladihaz(

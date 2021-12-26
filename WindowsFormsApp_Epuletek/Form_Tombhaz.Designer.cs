@@ -69,6 +69,7 @@ namespace WindowsFormsApp_Epuletek
             // comboBox_Epitesianyag
             // 
             this.comboBox_Epitesianyag.FormattingEnabled = true;
+            this.comboBox_Epitesianyag.ItemHeight = 13;
             this.comboBox_Epitesianyag.Location = new System.Drawing.Point(171, 100);
             this.comboBox_Epitesianyag.Name = "comboBox_Epitesianyag";
             this.comboBox_Epitesianyag.Size = new System.Drawing.Size(212, 21);
